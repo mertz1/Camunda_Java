@@ -43,7 +43,7 @@ Getting the chance to attempt this coding challenge was an enjoyable challenge f
 
 There were many learning curves, mostly centralized around the refamiliarizing of Java and the integrations with Camunda/Zeebe.
 
-Of the coding challenge requirements, there were many steps that I was unable to accomplish given the time allocated.  
+Of the coding challenge requirements, there were many steps that I was unable to accomplish:  
 
 :x: __TODO__:
 -  __Containerize the application:__
