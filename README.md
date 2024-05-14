@@ -1,6 +1,8 @@
 # Camunda_Java
 A sample camunda project built in Java
 
+[Run Steps](https://github.com/mertz1/Camunda_Java?tab=readme-ov-file#running-the-applicaiton-locally)
+
 ## Goal:
 Build a simple Camunda Client App for Camunda 8, that gets a random picture of a cat, a dog,
 or a bear. A list of free APIs can be found here: https://github.com/public-apis/public-apis. We
