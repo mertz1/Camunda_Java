@@ -3,7 +3,7 @@
 # Build Camunda Web Application
 echo "-------------! Building Camunda Spring App !-------------"
 
-cd Application/CamundaService/
+cd ../Application/CamundaService/
 ./build.sh
 cd ../../
 
