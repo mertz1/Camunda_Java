@@ -1,0 +1,18 @@
+services:
+  camunda-spring-app:
+      image: "camunda-spring-app:latest"
+      container_name: camunda-spring-app
+      ports:
+        - "8080:8080"
+      networks:
+        - camunda-app
+        - camunda-platform
+  image-job-worker:
+      image: "image-job-worker:latest"
+      container_name: image_job_worker
+      networks:
+        - camunda-app
+        - camunda-platform
+networks:
+  camunda-app:
+  camunda-platform:
