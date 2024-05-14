@@ -13,7 +13,7 @@ suggest:
 Main Tasks
 1. Create a process model (BPMN) that reflects the following
    - Based on a user’s selection the process fetches a picture of either a cat, a dog or
-  a bear
+  a bear ✅
 2. Build a client app that
    - Deploys the process model to a Camunda installation :white_check_mark:
    - Has a custom REST API to
