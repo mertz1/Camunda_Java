@@ -1,7 +1,7 @@
 # Camunda_Java
 A sample camunda project built in Java
 
-[Run Steps](https://github.com/mertz1/Camunda_Java?tab=readme-ov-file#running-the-applicaiton-locally)
+[Run Steps](https://github.com/mertz1/Camunda_Java?tab=readme-ov-file#running-the-application-locally)
 
 ## Goal:
 Build a simple Camunda Client App for Camunda 8, that gets a random picture of a cat, a dog,
@@ -62,21 +62,31 @@ Of the coding challenge requirements, there were many steps that I was unable to
 
 The coding challenge calls for about 6 hours of work, and challenging myself with a new tech stack, ended up spending about 15-20 hours on the challenge.  With still much left to do, it was much slower development than I would have hoped.
 
-## Running the applicaiton locally:
+## Running the application locally:
+
+Start the Camunda Self Contained Docker Containers:
 1) "cd Docker/Camunda_sc"
 2) "docker compose up -d"
-3) "cd ../../"
-4) "./build.sh" - builds local Java applications
-5) Run the Camunda App Service:
+
+Start the Application Postgres Image
+3) "cd ../postgres"
+4) "docker compose up -d"
+
+Build local Java Applications:
+5) "cd ../../"
+6) "./build.sh" - builds local Java applications
+7) Run the Camunda App Service:
    - "cd ../Application/CamundaService/target"
    - "java -jar CamundaService-0.0.1-SNAPSHOT.jar"
-6) Run the Image Job Handler Service: (Must run via IDE, cannot resolve built jar to run)
+8) Run the Image Job Handler Service: (Must run via IDE, cannot resolve built jar to run)
    - "cd ../../../Job Worker/ImageJobWorker/target"
    - "java -jar ImageJobWorker-1.0-SNAPSHOT.jar"
       - This returns an error, have not resolved yet.  Have to run via IDE
-7) Run POST request: "http://localhost:8080/camunda/start" With body (JSON): "{ "imageType": "cat" }"
+
+Kick off Process Instances via API
+9) Run POST request: "http://localhost:8080/camunda/start" With body (JSON): "{ "imageType": "cat" }"
    - output is a long value (processInstanceKey)
-8) Run GET request: "http://localhost:8080/camunda/image/{processInstanceKey}" to get Image
+10) Run GET request: "http://localhost:8080/camunda/image/{processInstanceKey}" to get Image
 
 #### Local Self Contained Camunda instance:
 1) "cd Docker/Camunda_sc/"
